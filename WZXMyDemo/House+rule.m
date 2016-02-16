@@ -20,35 +20,11 @@
     
     NSInteger  fromLine = self.index.section;
 
-    if (fromLine - 1 == toLine && fromRow - 2 == toRow)
+    if(ABS(toLine - fromLine) == 1 && ABS(toRow - fromRow) == 2)
     {
         return YES;
     }
-    else if(fromLine - 1 == toLine && fromRow + 2 == toRow)
-    {
-        return YES;
-    }
-    else if(fromLine - 2 == toLine && fromRow - 1 == toRow)
-    {
-        return YES;
-    }
-    else if(fromLine - 2 == toLine && fromRow + 1 == toRow)
-    {
-        return YES;
-    }
-    else if(fromLine + 1 == toLine && fromRow - 2 == toRow)
-    {
-        return YES;
-    }
-    else if(fromLine + 1 == toLine && fromRow + 2 == toRow)
-    {
-        return YES;
-    }
-    else if(fromLine + 2 == toLine && fromRow - 1 == toRow)
-    {
-        return YES;
-    }
-    else if(fromLine + 2 == toLine && fromRow + 1 == toRow)
+    else if(ABS(toLine - fromLine) == 2 && ABS(toRow - fromRow) == 1)
     {
         return YES;
     }
